@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Tools - Free Online PDF Utilities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            color: #6a11cb;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .tool-card p {
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .tool-card button {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .tool-card button:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .features {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature i {
+            font-size: 2.5rem;
+            color: #6a11cb;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            background: #2c3e50;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-file-pdf"></i>
+        </div>
+        <h1>Free PDF Tools</h1>
+        <p class="tagline">All the PDF tools you need, completely free and easy to use</p>
+    </header>
+    
+    <div class="container">
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-object-group"></i>
+                </div>
+                <h3>Merge PDF</h3>
+                <p>Combine multiple PDFs into one document</p>
+                <button onclick="showTool('Merge PDF')">Use Tool</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3>Split PDF</h3>
+                <p>Extract pages from your PDF or split into multiple files</p>
+                <button onclick="showTool('Split PDF')">Use Tool</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                </div>
+                <h3>Compress PDF</h3>
+                <p>Reduce file size while keeping quality</p>
+                <button onclick="showTool('Compress PDF')">Use Tool</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-file-word"></i>
+                </div>
+                <h3>PDF to Word</h3>
+                <p>Convert PDF to editable Word document</p>
+                <button onclick="showTool('PDF to Word')">Use Tool</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Protect PDF</h3>
+                <p>Add password protection to your PDF files</p>
+                <button onclick="showTool('Protect PDF')">Use Tool</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-lock-open"></i>
+                </div>
+                <h3>Unlock PDF</h3>
+                <p>Remove password protection from PDF files</p>
+                <button onclick="showTool('Unlock PDF')">Use Tool</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>PDF to Image</h3>
+                <p>Convert PDF pages to PNG or JPG images</p>
+                <button onclick="showTool('PDF to Image')">Use Tool</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3>Image to PDF</h3>
+                <p>Convert JPG, PNG or other images to PDF</p>
+                <button onclick="showTool('Image to PDF')">Use Tool</button>
+            </div>
+        </div>
+        
+        <div class="features">
+            <h2>Why Choose Our PDF Tools?</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <i class="fas fa-lock"></i>
+                    <h3>100% Secure</h3>
+                    <p>All processing happens in your browser - your files never leave your computer</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Processing</h3>
+                    <p>Quick PDF operations with modern technology</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Completely Free</h3>
+                    <p>No hidden fees, no subscriptions, no watermarks</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>Free PDF Tools</h3>
+            <p>All the tools you need to work with PDFs, available anytime anywhere</p>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Tools</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>© 2023 Free PDF Tools. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple JavaScript for the demo
+        function showTool(toolName) {
+            alert(`You selected ${toolName}. In a full implementation, this tool would open.`);
+            
+            // For a real implementation, you would:
+            // 1. Show a file upload interface
+            // 2. Process the PDF using a library like pdf-lib.js
+            // 3. Provide download options for the processed file
+        }
+        
+        // This would be where you add actual PDF functionality later
+        console.log("PDF Tools website loaded successfully");
+        
+        // Example of how to use pdf-lib in the future:
+        /*
+        async function mergePDFs(pdfFiles) {
+            // const { PDFDocument } = PDFLib;
+            // const mergedPdf = await PDFDocument.create();
+            
+            // for (const pdfFile of pdfFiles) {
+            //     const pdfBytes = await pdfFile.arrayBuffer();
+            //     const pdf = await PDFDocument.load(pdfBytes);
+            //     const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+            //     copiedPages.forEach((page) => mergedPdf.addPage(page));
+            // }
+            
+            // const mergedPdfFile = await mergedPdf.save();
+            // return new Blob([mergedPdfFile], { type: 'application/pdf' });
+        }
+        */
+    </script>
+</body>
+</html>
